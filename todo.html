@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+			<title>Online Todo List</title>
+			<meta charset="utf-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+			<link href="https://fonts.googleapis.com/css?family=Poiret+One|Fjalla+One" rel="stylesheet">
+   
+		<style>
+   
+   
+input:focus {
+  outline: none;
+}
+
+		h1 {
+  color: #fff;
+  text-align: center;
+  font-family: 'Poiret One', verdana, arial;
+  font-size: 7em;
+  font-weight: bold;
+}
+
+			body {
+			     
+				font : normal normal 13px/16px "Open Sans", sans-serif;
+				background : #5098ea;
+				 
+				}
+    
+			.mainpart {	
+				
+				padding : 20px;
+				width : 300px;
+				margin : 0 auto;
+				margin-top : 40px;
+				background : white;
+				border-radius : 5px;
+				
+				color : #021020;
+				-moz-user-select : none;
+				-khtml-user-select : none;
+				-webkit-user-select : none;
+				user-select : none;
+				
+				
+				}
+			
+			#add{
+			
+			font-family: 'Poiret One', verdana, arial;
+			}
+			
+			form {
+				
+				display : inline-block;
+				
+				}
+				
+			input {
+			
+				padding : 4px 15px 4px 5px;
+				
+				}
+				
+			#button{
+				
+				display : inline-block;
+				background-color : #053973;
+				color : #ffffff;
+				border-radius : 5px;
+				text-align : center;
+				margin-top : 2px;
+				padding : 5px 15px;
+				
+				}
+				
+			#button:hover{
+				
+				cursor : pointer;
+				opacity : .8;
+				}
+			
+			ul { 
+			
+				padding-left : 20px;
+				}
+			
+			ul li { padding : 5px; color : #061d37; font-style : bold; }
+			
+			ul li:nth-child(even) { background : #afcef0;}
+			
+			.strike {text.decoration : line-through;}
+			
+			li:hover {
+			
+				cursor : pointer;
+				
+				}
+			
+			
+			
+		</style>
+   
+		<script>
+		
+
+				
+			function addItem() {
+						
+						
+						var li = document.createElement("LI");
+						var input = document.getElementById("add");
+						
+						if (input == " "){
+						alert("Fill the Fields Currectly");
+						}else {
+						
+						li.innerHTML = input.value;
+						input.value = " ";
+						li.ondblclick = function() {this.parentNode.removeChild(this);}
+						document.getElementById("list").appendChild(li);
+						}
+							
+						
+						}
+		
+		
+   
+		</script>
+   
+	</head>
+	
+	<body>
+<h1>ToDo List </h1>
+		
+			
+			<div class = "container-fluid">
+			<div class = "mainpart">
+			
+			<p><em><center>Double Click on the Task to remove</center></em></p>
+			
+			<form name="toDoList">
+			
+				<input type = "text" name="ListItem" id="add" >
+			
+				<input type = "button" id = "button" value = "ADD" onclick = "addItem()">
+			
+			</form>
+			<br>
+			<ul id="list">
+				
+			</ul>
+</div>
+</div>
+
+		
+
+
+
+	</body>
+</html>
