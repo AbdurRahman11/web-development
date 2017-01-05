@@ -1,0 +1,227 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Online Converter</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="https://fonts.googleapis.com/css?family=Poiret+One|Fjalla+One" rel="stylesheet">
+   
+		<script>
+		
+		function ktop(){
+		var x = parseInt(document.getElementById("val1").value);
+		var y = x * 2.205;
+		document.getElementById("val3").value = y + "  lbs" ;
+		}
+		
+		
+		
+		function cl() {
+		document.getElementById("val1").value = " " ;
+		document.getElementById("val3").value = " " ;
+		document.getElementById("val2").value = " " ;
+		document.getElementById("val4").value = " " ;
+		}
+		
+		function mtoy(){
+		var x = parseInt(document.getElementById("val1").value);
+		var y = x * 1.094;
+		document.getElementById("val3").value = y + "  yards" ;
+		}
+		
+		function ytom(){
+		var x = parseInt(document.getElementById("val2").value);
+		var y = x * 0.914;
+		document.getElementById("val4").value = y + "  metre" ;
+		}
+		
+		function ctof() {
+		var x = parseInt(document.getElementById("val1").value);
+		var y = (x * 1.800)+32.00;
+		document.getElementById("val3").value = y + "  deg F" ;
+		
+		}
+		
+		function ftoc() {
+		var x = parseInt(document.getElementById("val2").value);
+		var y = (x - 32)/1.8;
+		document.getElementById("val4").value = y + "  deg C" ;
+		
+		}
+		
+		function con1() {
+		document.getElementById("cal").style.display = 'none' ;
+		document.getElementById("cal2").style.display = 'block' ;
+		document.getElementById("val1").value = " " ;
+		document.getElementById("val3").value = " " ;
+		document.getElementById("val2").value = " " ;
+		document.getElementById("val4").value = " " ;
+		}
+		
+		function ptok(){
+		var x = parseInt(document.getElementById("val2").value);
+		var y = x * 0.454;
+		document.getElementById("val4").value = y + "  kgs" ;
+		}
+		
+		function con2() {
+		document.getElementById("cal").style.display = 'block' ;
+		document.getElementById("cal2").style.display = 'none' ;
+		document.getElementById("val1").value = " " ;
+		document.getElementById("val3").value = " " ;
+		document.getElementById("val2").value = " " ;
+		document.getElementById("val4").value = " " ;
+		}
+		
+		
+		
+		</script>
+   
+		<style>
+		
+		* {
+		box-sizing : border-box;
+		margin : 0;
+		padding : 0;
+		
+		}
+		
+		body {
+		background-color : #5098ea;
+		
+		}
+		
+		h1 {
+		color: #fff;
+		text-align: center;
+		font-family: 'Poiret One', verdana, arial;
+		font-size: auto;
+		font-weight: bold;
+		margin-bottom : 20px;
+		}
+
+		input [type = text] , select {
+
+		width : 100%;
+		padding : 12px 12px;
+		display : inline-block;
+		border : 1px solid #ccc;
+		border-radius : 5px;
+		box-sizing : border:box;
+		font-family: 'Poiret One', verdana, arial;
+		}
+		
+		#val1, #val3, #val2, #val4 {
+		
+		width : 100%;
+		font-family: "Fjalla One", Verdana, Arial;
+		}
+		
+		#cal {
+		
+		padding : 50px 10px ;
+		border-radius : 50px;
+		background-color : #0c1664;
+		top : 30%;
+		left : 30%;
+		width : 100%;
+		font-family: 'Poiret One', verdana, arial;
+		text-align : center;
+		color : white ;
+		}
+		
+		#cal2 {
+		
+		
+		padding : 50px 10px ;
+		border-radius : 50px;
+		background-color : #0a022e;
+		top : 30%;
+		left : 30%;
+		width : 100%;
+		display : none;
+		font-family: 'Poiret One', verdana, arial;
+		text-align : center;
+		color : white ;
+		}
+		
+		.keys {
+		
+		margin-left: 10px;
+		margin-bottom: 10px;
+		width: 200px;
+		height: 30px;
+		border-radius: 5px;
+		box-shadow: 0px 0px 6px black;
+		cursor: pointer;
+		background : #154c8a;
+		color : white;
+		font-family: "Fjalla One", Verdana, Arial;
+		}
+
+		.container-fluid {
+		
+		width : 100%;
+		}
+
+		</style>
+	</head>
+   
+	<body>
+			
+			<div class = "container-fluid">
+			<br>
+			<br>
+			<br>
+			<div id = "cal" style= "margin-left : auto; margin-right : auto;">
+			<div class = "container-fluid">
+			<h1>Online Converter</h1>
+			<p> use "TOGGLE" to swap between the metrics</p>
+			<br>
+			<hr>
+			<br>
+				<table width = '100%'>
+					<tr><td>Your Value</td><td><input type= "text" id="val1"></td></tr>
+					<tr><td>Answer</td><td><input type = "text" id = "val3" ></td></tr>
+					
+				</table>
+			 <br>
+					<div class = "container-fluid" >
+					<input type ="button" value = "Kilo to Pound" class = "keys" onclick = "ktop()"> 
+					<input type ="button" value = "Metre to Yards" class = "keys" onclick = "mtoy()"> 
+					<input type ="button" value = "Celsius to Fahrenheit" class = "keys" onclick = "ctof()">
+					<br>
+					<input type ="button" value = "Clear" class = "keys" onclick = "cl()"> 
+					<input type ="button" value = "Toggle" class = "keys" onclick = "con1()"> 
+					</div>
+			</div>
+			</div>
+			<div id = "cal2" style= "margin-left : auto; margin-right : auto;">
+			
+			<div class = "container-fluid">
+			<h1>Online Converter</h1>
+			<p> use "TOGGLE" to swap between the metrics</p>
+			<br>
+			<hr>
+			<br>
+				<table width = '100%'>
+					<tr><td>Your Value</td><td><input type= "text" id="val2"></td></tr>
+					<tr><td>Answer</td><td><input type = "text" id = "val4" ></td></tr>
+					
+				</table>
+			 <br>
+					<div class = "container-fluid">
+					<input type ="button" value = "Pound to Kilo" class = "keys" onclick = "ptok()"> 
+					<input type ="button" value = "Yards to Metre" class = "keys" onclick = "ytom()"> 
+					<input type ="button" value = "Fahrenheit to Celcius" class = "keys" onclick = "ftoc()">
+					<br>
+					<input type ="button" value = "Clear" class = "keys" onclick = "cl()"> 
+					<input type ="button" value = "Toggle" class = "keys" onclick = "con2()"> 
+					</div>
+			
+		</div>
+			</div>
+			
+			</div>
+	</body>
+</html>
